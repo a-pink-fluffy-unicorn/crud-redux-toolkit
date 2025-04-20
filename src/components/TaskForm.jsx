@@ -39,17 +39,21 @@ const TaskForm = () => {
   }, [params.id, tasks, setValue]);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className='bg-zinc-800 max-w-sm p-4 rounded-md'>
+      <label className='block font-bold text-xs mb-2'>Task:</label>
       <input
         {...register("title", { required: true })}
         type="text"
         placeholder="title"
+        className='w-full p-2 rounded-md bg-zinc-600 mb-2'
       />
+      <label className='block font-bold text-xs mb-2'>Description:</label>
       <textarea
         {...register("description", { required: true })}
         placeholder="description"
+        className='w-full p-2 rounded-md bg-zinc-600 mb-2'
       ></textarea>
-      <button type="submit">Save</button>
+      <button type="submit" className='bg-indigo-600 px-2 py-1'>Save</button>
     </form>
   );
 };

@@ -4,8 +4,8 @@ import TasksList from './components/TasksList.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App () {
   return (
-    <div className='App'>
-      <h1>Redux Toolkit</h1>
+    <div className='bg-zinc-900 h-screen text-white'>
+      <div className='flex items-center justify-center h-screen'>
       <BrowserRouter> 
       <Routes>
       <Route path='/' element = {<TasksList />} />
@@ -13,6 +13,8 @@ function App () {
       <Route path='/edit-task/:id' element= {<TaskForm />}/>
       </Routes>
       </BrowserRouter>
+      </div>
+      
     </div>
   )
 }
